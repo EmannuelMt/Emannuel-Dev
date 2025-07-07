@@ -31,11 +31,6 @@ export default function Header() {
     { 
       path: "/servicos", 
       name: "Serviços",
-      submenu: [
-        { path: "/servicos/sites", name: "Sites Institucionais" },
-        { path: "/servicos/landing-pages", name: "Landing Pages" },
-        { path: "/servicos/bots", name: "Bots Discord" }
-      ]
     },
     { 
       path: "/portfolio", 
@@ -136,7 +131,7 @@ export default function Header() {
 
         {/* Botão WhatsApp Desktop */}
         <motion.a
-          href="https://wa.me/SEUNUMERO"
+          href="https://wa.me/5562984317595?text=Olá%20Emannuel%20Dev!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." 
           className="whatsapp-button desktop"
           target="_blank"
           rel="noopener noreferrer"
@@ -240,7 +235,7 @@ export default function Header() {
                 </ul>
 
                 <motion.a
-                  href="https://wa.me/SEUNUMERO"
+                   href="https://wa.me/5562984317595?text=Olá%20Emannuel%20Dev!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." 
                   className="whatsapp-button mobile"
                   target="_blank"
                   rel="noopener noreferrer"

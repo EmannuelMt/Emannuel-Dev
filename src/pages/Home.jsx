@@ -1,33 +1,52 @@
-import { FaLaptopCode, FaRobot, FaMobileAlt, FaArrowRight, FaWhatsapp, FaRegClock, FaRegMoneyBillAlt, FaRegUserCircle } from 'react-icons/fa';
+import { useState } from 'react';
+import { 
+  FaLaptopCode, 
+  FaRobot, 
+  FaMobileAlt, 
+  FaArrowRight, 
+  FaWhatsapp, 
+  FaRegClock, 
+  FaRegMoneyBillAlt, 
+  FaRegUserCircle,
+  FaChevronDown,
+  FaChevronUp
+} from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Home.css';
 
 export default function Home() {
+  // Estado para controlar qual item do FAQ está aberto
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    setActiveFaqIndex(activeFaqIndex === index ? null : index);
+  };
+
   const services = [
     {
       icon: <FaLaptopCode className="service-icon" />,
       title: "Sites Profissionais",
-      description: "Modernos, rápidos e responsivos",
+      description: "Desenvolvimento de sites modernos, rápidos e responsivos",
       highlight: "Ideal para autônomos e pequenos negócios"
     },
     {
       icon: <FaMobileAlt className="service-icon" />,
       title: "Landing Pages",
-      description: "Foco em conversão e captação de leads",
+      description: "Páginas de alta conversão para campanhas específicas",
       highlight: "Aumente suas vendas online"
     },
     {
       icon: <FaRobot className="service-icon" />,
       title: "Bots para Discord",
-      description: "Automatizações para atendimento ou comandos",
-      highlight: "Melhore sua comunidade"
+      description: "Automatizações inteligentes para sua comunidade",
+      highlight: "Melhore a interação do seu servidor"
     }
   ];
 
   const portfolioItems = [
     {
       title: "Loja Virtual - Moda Fitness",
-      type: "Site Completo",
+      type: "E-commerce Completo",
       image: "/portfolio/ecommerce-fitness.jpg"
     },
     {
@@ -44,29 +63,41 @@ export default function Home() {
 
   const pricingPlans = [
     {
-      name: "Site Simples",
-      price: "400",
-      features: ["1-3 páginas", "Design responsivo", "Formulário de contato"]
+      name: "Site Básico",
+      price: "800",
+      features: ["Até 5 páginas", "Design responsivo", "Formulário de contato", "Otimização básica SEO"],
+      popular: false
     },
     {
-      name: "Site Completo",
-      price: "1.000",
-      features: ["Até 10 páginas", "Painel administrativo", "Domínio + Hospedagem", "SEO básico"]
+      name: "Site Profissional",
+      price: "1.500",
+      features: ["Até 15 páginas", "Painel administrativo", "Blog integrado", "SEO avançado", "Suporte 30 dias"],
+      popular: true
+    },
+    {
+      name: "Landing Page",
+      price: "500",
+      features: ["1 página otimizada", "Formulário de leads", "Design high-conversion", "Integração com redes sociais"],
+      popular: false
     }
   ];
 
   const faqs = [
     {
-      question: "Você aceita pagamento parcelado?",
-      answer: "Sim, aceitamos pagamento em até 12x no cartão ou parcelado no Pix."
+      question: "Qual o prazo médio de entrega?",
+      answer: "Sites básicos em até 7 dias úteis, projetos complexos em até 15 dias. Landing pages em 5 dias úteis."
     },
     {
-      question: "Posso atualizar o site sozinho depois?",
-      answer: "Oferecemos painel administrativo para edições básicas em todos os nossos pacotes completos."
+      question: "Vocês oferecem suporte pós-entrega?",
+      answer: "Sim, todos os projetos incluem 30 dias de suporte gratuito. Após este período, oferecemos planos de manutenção mensal."
     },
     {
-      question: "Quanto tempo demora para entregar?",
-      answer: "Sites simples em 7 dias úteis, projetos complexos em até 15 dias."
+      question: "Posso fazer alterações no site depois?",
+      answer: "Oferecemos painel administrativo para edições básicas em todos os nossos pacotes profissionais."
+    },
+    {
+      question: "Qual a forma de pagamento?",
+      answer: "Aceitamos parcelamento em até 12x no cartão, transferência bancária ou PIX (com desconto à vista)."
     }
   ];
 
@@ -82,7 +113,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
               className="hero-title"
             >
-              Criação de Sites e Bots com <span>Entrega Rápida e Preço Justo</span>
+              Soluções Digitais <span>que Impulsionam</span> seu Negócio
             </motion.h1>
             
             <motion.p
@@ -91,7 +122,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="hero-subtitle"
             >
-              Soluções personalizadas para pequenos negócios, autônomos e criadores
+              Desenvolvimento web personalizado com foco em resultados e experiência do usuário
             </motion.p>
             
             <motion.div
@@ -103,8 +134,8 @@ export default function Home() {
               <a href="/contato" className="cta-button primary">
                 Solicite um orçamento
               </a>
-              <a href="#simulador" className="cta-button secondary">
-                Simule seu preço
+              <a href="#servicos" className="cta-button secondary">
+                Conheça nossos serviços <FaChevronDown />
               </a>
             </motion.div>
           </div>
@@ -118,6 +149,10 @@ export default function Home() {
             <img src="/images/hero-dev.png" alt="Desenvolvimento Web" loading="lazy" />
           </motion.div>
         </div>
+
+        <div className="scroll-indicator">
+          <FaChevronDown className="bounce" />
+        </div>
       </section>
 
       {/* Mini Bio */}
@@ -127,25 +162,35 @@ export default function Home() {
             <div className="bio-content">
               <h2>Sobre a Emannuel Dev</h2>
               <p>
-                Sou desenvolvedor web com foco em sites funcionais, landing pages estratégicas e automações inteligentes. 
-                Entrego rápido, com suporte real e preço acessível.
+               Na Emannuel Dev, transformamos ideias em presença digital de verdade. Somos uma loja digital especializada em oferecer sites, bots e landing pages sob medida, com foco em pequenos negócios, autônomos e prestadores de serviço que querem se destacar sem complicação e sem gastar muito.
+
+Com uma abordagem direta, organizada e transparente, entregamos resultados reais, com design funcional, atendimento humano e suporte pós-venda. Aqui, você encontra preços justos, comunicação fácil e entrega rápida — tudo com a sua cara, sem enrolação.
               </p>
               <a href="/sobre" className="bio-link">
-                Conheça mais sobre meu trabalho <FaArrowRight />
+                Conheça minha jornada <FaArrowRight />
               </a>
             </div>
             <div className="bio-highlights">
               <div className="highlight-item">
                 <FaRegClock className="highlight-icon" />
-                <span>Entrega Rápida</span>
+                <div>
+                  <h4>Entrega Rápida</h4>
+                  <p>Projetos entregues em até 7 dias</p>
+                </div>
               </div>
               <div className="highlight-item">
                 <FaRegMoneyBillAlt className="highlight-icon" />
-                <span>Preço Justo</span>
+                <div>
+                  <h4>Preço Justo</h4>
+                  <p>Soluções acessíveis sem perder qualidade</p>
+                </div>
               </div>
               <div className="highlight-item">
                 <FaRegUserCircle className="highlight-icon" />
-                <span>Suporte Personalizado</span>
+                <div>
+                  <h4>Suporte Dedicado</h4>
+                  <p>Acompanhamento personalizado</p>
+                </div>
               </div>
             </div>
           </div>
@@ -153,11 +198,11 @@ export default function Home() {
       </section>
 
       {/* Serviços */}
-      <section className="services-section">
+      <section id="servicos" className="services-section">
         <div className="container">
           <div className="section-header">
-            <h2>Serviços Oferecidos</h2>
-            <p>Soluções digitais sob medida para suas necessidades</p>
+            <h2>Nossos Serviços</h2>
+            <p>Soluções digitais personalizadas para suas necessidades</p>
           </div>
           
           <div className="services-grid">
@@ -179,63 +224,59 @@ export default function Home() {
                 <div className="service-highlight">
                   {service.highlight}
                 </div>
+                <a href={`/servicos#${service.title.toLowerCase().replace(/\s+/g, '-')}`} className="service-link">
+                  Saiba mais <FaArrowRight />
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Simulador */}
-      <section id="simulador" className="simulator-section">
+      {/* Diferenciais */}
+      <section className="features-section">
         <div className="container">
-          <div className="simulator-card">
-            <div className="simulator-content">
-              <h2>Simule o valor do seu projeto</h2>
-              <p>Descubra em poucos cliques o investimento necessário para seu site ou bot</p>
-              
-              <form className="simulator-form">
-                <div className="form-group">
-                  <label>Tipo de Projeto</label>
-                  <select>
-                    <option value="">Selecione...</option>
-                    <option value="site">Site Institucional</option>
-                    <option value="landing">Landing Page</option>
-                    <option value="bot">Bot para Discord</option>
-                  </select>
-                </div>
-                
-                <div className="form-group">
-                  <label>Recursos Adicionais</label>
-                  <div className="checkbox-group">
-                    <label>
-                      <input type="checkbox" /> Painel Administrativo
-                    </label>
-                    <label>
-                      <input type="checkbox" /> Formulário de Contato
-                    </label>
-                    <label>
-                      <input type="checkbox" /> Integração com WhatsApp
-                    </label>
-                  </div>
-                </div>
-                
-                <button type="button" className="simulator-button">
-                  Calcular Valor
-                </button>
-              </form>
-            </div>
-            <div className="simulator-result">
-              <div className="result-placeholder">
-                <p>Preencha os campos ao lado para simular seu orçamento</p>
-                <div className="result-value hidden">
-                  <span>Valor estimado:</span>
-                  <strong>R$ 0,00</strong>
-                  <a href="https://wa.me/SEUNUMERO" className="whatsapp-button">
-                    <FaWhatsapp /> Falar no WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div className="section-header">
+            <h2>Por que escolher meus serviços?</h2>
+            <p>Diferenciais que fazem a diferença no seu projeto digital</p>
+          </div>
+          
+          <div className="features-grid">
+            <motion.div 
+              className="feature-card"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="feature-number">01</div>
+              <h3>Design Centrado no Usuário</h3>
+              <p>Interfaces intuitivas que proporcionam a melhor experiência para seus clientes</p>
+            </motion.div>
+            
+            <motion.div 
+              className="feature-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="feature-number">02</div>
+              <h3>Performance Otimizada</h3>
+              <p>Sites rápidos que melhoram seu posicionamento no Google</p>
+            </motion.div>
+            
+            <motion.div 
+              className="feature-card"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="feature-number">03</div>
+              <h3>Tecnologia Moderna</h3>
+              <p>Utilizo as ferramentas mais atuais do mercado para desenvolvimento</p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -244,8 +285,8 @@ export default function Home() {
       <section className="portfolio-section">
         <div className="container">
           <div className="section-header">
-            <h2>Destaques do Portfólio</h2>
-            <p>Confira alguns dos projetos recentes</p>
+            <h2>Trabalhos Recentes</h2>
+            <p>Confira alguns projetos que desenvolvi para clientes</p>
           </div>
           
           <div className="portfolio-grid">
@@ -261,10 +302,13 @@ export default function Home() {
               >
                 <div className="portfolio-image">
                   <img src={item.image} alt={item.title} loading="lazy" />
-                </div>
-                <div className="portfolio-info">
-                  <h3>{item.title}</h3>
-                  <span>{item.type}</span>
+                  <div className="portfolio-overlay">
+                    <h3>{item.title}</h3>
+                    <span>{item.type}</span>
+                    <a href={`/portfolio/${item.title.toLowerCase().replace(/\s+/g, '-')}`} className="portfolio-link">
+                      Ver detalhes
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -272,7 +316,7 @@ export default function Home() {
           
           <div className="portfolio-cta">
             <a href="/portfolio" className="cta-button secondary">
-              Ver portfólio completo
+              Explorar portfólio completo
             </a>
           </div>
         </div>
@@ -282,23 +326,24 @@ export default function Home() {
       <section className="pricing-section">
         <div className="container">
           <div className="section-header">
-            <h2>Planos e Preços</h2>
-            <p>Transparência e soluções para todos os orçamentos</p>
+            <h2>Planos e Investimento</h2>
+            <p>Soluções para diferentes necessidades e orçamentos</p>
           </div>
           
           <div className="pricing-grid">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                className="pricing-card"
+                className={`pricing-card ${plan.popular ? 'popular' : ''}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
+                {plan.popular && <div className="popular-badge">Mais escolhido</div>}
                 <h3>{plan.name}</h3>
                 <div className="pricing-value">
-                  R$ <span>{plan.price}</span>
+                  <span>R$</span> {plan.price}
                 </div>
                 <ul className="pricing-features">
                   {plan.features.map((feature, i) => (
@@ -306,16 +351,14 @@ export default function Home() {
                   ))}
                 </ul>
                 <a href="/contato" className="pricing-button">
-                  Contratar
+                  Contratar agora
                 </a>
               </motion.div>
             ))}
           </div>
           
-          <div className="pricing-cta">
-            <a href="/precos" className="pricing-link">
-              Veja todos os pacotes e opcionais
-            </a>
+          <div className="pricing-disclaimer">
+            <p>Valores podem variar conforme complexidade do projeto. Entre em contato para um orçamento personalizado.</p>
           </div>
         </div>
       </section>
@@ -325,22 +368,26 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <h2>Perguntas Frequentes</h2>
-            <p>Tire suas dúvidas sobre nossos serviços</p>
+            <p>Tire suas dúvidas sobre desenvolvimento web</p>
           </div>
           
           <div className="faq-grid">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                className="faq-item"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+              <div 
+                key={index} 
+                className={`faq-item ${activeFaqIndex === index ? 'active' : ''}`}
               >
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </motion.div>
+                <div 
+                  className="faq-question" 
+                  onClick={() => toggleFaq(index)}
+                >
+                  <h3>{faq.question}</h3>
+                  {activeFaqIndex === index ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                <div className="faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -353,18 +400,23 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="final-cta-content"
+            transition={{ duration: 0.6 }}
+            className="final-cta-card"
           >
-            <h2>Pronto para tirar sua ideia do papel?</h2>
-            <p>Clique no botão abaixo e vamos conversar</p>
-            <a 
-              href="https://wa.me/SEUNUMERO" 
-              className="whatsapp-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaWhatsapp /> Falar agora no WhatsApp
-            </a>
+            <div className="final-cta-content">
+              <h2>Pronto para transformar sua presença digital?</h2>
+              <p>Vamos conversar sobre seu projeto e como posso ajudar seu negócio a crescer online</p>
+            </div>
+            <div className="final-cta-buttons">
+              <a 
+                href="https://wa.me/5562984317595?text=Olá%20Emannuel%20Dev!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." 
+                className="cta-button whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp /> Falar no WhatsApp
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>

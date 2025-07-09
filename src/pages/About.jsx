@@ -49,14 +49,14 @@ export default function About() {
     { icon: <SiJavascript />, name: "JavaScript" },
     { icon: <SiReact />, name: "React" },
     { icon: <SiNodedotjs />, name: "Node.js" },
-    { icon: <SiTypescript />, name: "TypeScript" }
+    { icon: <SiTypescript />, name: "JavaScript" }
   ];
 
   const stats = [
-    { value: "50+", label: "Projetos Entregues" },
+    { value: "50", label: "Projetos Entregues" },
     { value: "100%", label: "Clientes Satisfeitos" },
-    { value: "5+", label: "Anos de Experiência" },
-    { value: "7", label: "Dias Prazo Médio" }
+    { value: "1", label: "Ano de Experiência" },
+    { value: "10", label: "Dias Prazo Médio" }
   ];
 
   return (
@@ -115,7 +115,7 @@ export default function About() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <img src="/profile-placeholder.jpg" alt="Emannuel Dev" />
+              <img src="/Screenshot_2025-03-23-14-20-05-255_com.instagram.android.jpg" alt="Emannuel Dev" />
               <div className="image-overlay">
                 <div className="tech-stack">
                   {techStack.map((tech, index) => (
@@ -152,7 +152,13 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Com mais de 5 anos de experiência no mercado, minha carreira começou como autodidata, apaixonado por resolver problemas através do código. Hoje, especializado no ecossistema JavaScript, ajudo negócios a estabelecerem uma presença digital impactante.
+             Sou Emannuel, tenho 20 anos e sou desenvolvedor web focado em transformar ideias em experiências digitais únicas, rápidas e acessíveis. Crio sites modernos, bots automatizados e landing pages estratégicas para pequenos negócios, criadores de conteúdo e empreendedores que querem se destacar online — sem complicação, enrolação ou promessas vazias.
+
+Trabalho com foco em agilidade, personalização e eficiência, aliando técnica, criatividade e suporte real. Cada projeto é construído como uma missão: com planejamento, dedicação e entrega pontual.
+
+Além do desenvolvimento, sou uma pessoa que gosta de aprender sempre, buscando novas tecnologias e tendências para entregar o melhor aos meus clientes. Valorizo a comunicação transparente e o relacionamento direto, porque acredito que isso faz toda a diferença no resultado final.
+
+Seja um portfólio, uma landing page que converte, um site com painel de controle ou até um bot para Discord — aqui você tem transparência, suporte direto comigo e resultado de verdade.
               </motion.p>
               
               <motion.div 

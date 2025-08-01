@@ -13,6 +13,10 @@ import {
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Home.css';
+<<<<<<< HEAD
+=======
+import profileImage from './ChatGPT Image 1 de ago. de 2025, 17_30_39.png';
+>>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
 
 export default function Home() {
   // Estado para controlar qual item do FAQ está aberto
@@ -64,7 +68,11 @@ export default function Home() {
   const pricingPlans = [
     {
       name: "Site Básico",
+<<<<<<< HEAD
       price: "800",
+=======
+      price: " R$ 950",
+>>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
       features: ["Até 5 páginas", "Design responsivo", "Formulário de contato", "Otimização básica SEO"],
       popular: false
     },
@@ -85,7 +93,11 @@ export default function Home() {
   const faqs = [
     {
       question: "Qual o prazo médio de entrega?",
+<<<<<<< HEAD
       answer: "Sites básicos em até 7 dias úteis, projetos complexos em até 15 dias. Landing pages em 5 dias úteis."
+=======
+      answer: "Sites básicos em até 10-15 dias úteis, projetos complexos em até 15 dias. Landing pages em 5 dias úteis."
+>>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
     },
     {
       question: "Vocês oferecem suporte pós-entrega?",
@@ -146,7 +158,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="hero-image"
           >
+<<<<<<< HEAD
             <img src="/images/hero-dev.png" alt="Desenvolvimento Web" loading="lazy" />
+=======
+            <img src={profileImage} alt="Desenvolvimento Web" loading="lazy" />
+>>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
           </motion.div>
         </div>
 
@@ -175,7 +191,11 @@ Com uma abordagem direta, organizada e transparente, entregamos resultados reais
                 <FaRegClock className="highlight-icon" />
                 <div>
                   <h4>Entrega Rápida</h4>
+<<<<<<< HEAD
                   <p>Projetos entregues em até 7 dias</p>
+=======
+                  <p>Projetos entregues em até 10 dias</p>
+>>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
                 </div>
               </div>
               <div className="highlight-item">

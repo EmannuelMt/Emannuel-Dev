@@ -2,6 +2,10 @@ import { FaCode, FaPalette, FaRocket, FaHandshake, FaMedal, FaClock, FaLightbulb
 import { SiJavascript, SiReact, SiNodedotjs, SiTypescript } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './About.css';
+<<<<<<< HEAD
+=======
+import profileImage from './IMG-20250323-WA0010.jpg';
+>>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
 
 export default function About() {
   const values = [
@@ -115,7 +119,11 @@ export default function About() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
+<<<<<<< HEAD
               <img src="/Screenshot_2025-03-23-14-20-05-255_com.instagram.android.jpg" alt="Emannuel Dev" />
+=======
+              <img src={profileImage} alt="Emannuel Dev" />
+>>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
               <div className="image-overlay">
                 <div className="tech-stack">
                   {techStack.map((tech, index) => (

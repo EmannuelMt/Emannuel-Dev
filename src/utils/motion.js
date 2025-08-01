@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-// src/utils/motion.js
-export const staggerContainer = (staggerChildren, delayChildren) => ({
-=======
 import { motion } from 'framer-motion';
 
 export const staggerContainer = (staggerChildren = 0.1, delayChildren = 0.1) => ({
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
   hidden: {},
   show: {
     transition: {
@@ -15,8 +10,6 @@ export const staggerContainer = (staggerChildren = 0.1, delayChildren = 0.1) => 
   },
 });
 
-<<<<<<< HEAD
-=======
 export const textVariant = (delay = 0) => ({
   hidden: {
     y: 50,
@@ -33,8 +26,7 @@ export const textVariant = (delay = 0) => ({
   },
 });
 
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
-export const fadeIn = (direction, type, delay, duration) => ({
+export const fadeIn = (direction, type = 'spring', delay = 0, duration = 1) => ({
   hidden: {
     x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
     y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
@@ -45,46 +37,37 @@ export const fadeIn = (direction, type, delay, duration) => ({
     y: 0,
     opacity: 1,
     transition: {
-<<<<<<< HEAD
       type,
       delay,
       duration,
-=======
-      type: type || 'spring',
-      delay,
-      duration: duration || 1,
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
       ease: 'easeOut',
     },
   },
 });
 
-<<<<<<< HEAD
-export const slideIn = (direction, type, delay, duration) => ({
+export const slideIn = (direction, type = 'spring', delay = 0, duration = 0.75) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
     y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+    opacity: 0,
   },
   show: {
     x: 0,
     y: 0,
+    opacity: 1,
     transition: {
       type,
       delay,
       duration,
       ease: 'easeOut',
+      bounce: 0.25,
     },
   },
 });
 
-export const zoomIn = (delay, duration) => ({
-  hidden: {
-    scale: 0.5,
-=======
 export const zoomIn = (delay = 0, duration = 1) => ({
   hidden: {
     scale: 0,
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
     opacity: 0,
   },
   show: {
@@ -94,29 +77,7 @@ export const zoomIn = (delay = 0, duration = 1) => ({
       type: 'spring',
       delay,
       duration,
-<<<<<<< HEAD
-      ease: 'easeOut',
-=======
       bounce: 0.4,
-    },
-  },
-});
-
-export const slideIn = (direction, type, delay, duration) => ({
-  hidden: {
-    x: direction === 'left' ? '-100%' : '100%',
-    opacity: 0,
-  },
-  show: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      type: type || 'spring',
-      delay,
-      duration: duration || 0.75,
-      ease: 'easeOut',
-      bounce: 0.25,
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
     },
   },
 });
@@ -125,27 +86,16 @@ export const planetVariants = (direction) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : '100%',
     rotate: 120,
-<<<<<<< HEAD
-=======
     opacity: 0,
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
   },
   show: {
     x: 0,
     rotate: 0,
-<<<<<<< HEAD
-=======
     opacity: 1,
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
     transition: {
       type: 'spring',
       duration: 1.8,
       delay: 0.5,
-<<<<<<< HEAD
-    },
-  },
-});
-=======
       ease: [0.25, 0.25, 0.25, 0.75],
     },
   },
@@ -193,4 +143,3 @@ export const pulseAnimation = {
     ease: 'easeInOut',
   },
 };
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)

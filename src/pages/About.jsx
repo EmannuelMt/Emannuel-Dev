@@ -2,10 +2,7 @@ import { FaCode, FaPalette, FaRocket, FaHandshake, FaMedal, FaClock, FaLightbulb
 import { SiJavascript, SiReact, SiNodedotjs, SiTypescript } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './About.css';
-<<<<<<< HEAD
-=======
 import profileImage from './IMG-20250323-WA0010.jpg';
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
 
 export default function About() {
   const values = [
@@ -53,7 +50,7 @@ export default function About() {
     { icon: <SiJavascript />, name: "JavaScript" },
     { icon: <SiReact />, name: "React" },
     { icon: <SiNodedotjs />, name: "Node.js" },
-    { icon: <SiTypescript />, name: "JavaScript" }
+    { icon: <SiTypescript />, name: "TypeScript" }  // Fixed duplicate JavaScript entry
   ];
 
   const stats = [
@@ -119,11 +116,7 @@ export default function About() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-<<<<<<< HEAD
-              <img src="/Screenshot_2025-03-23-14-20-05-255_com.instagram.android.jpg" alt="Emannuel Dev" />
-=======
-              <img src={profileImage} alt="Emannuel Dev" />
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
+              <img src={profileImage} alt="Emannuel Dev" loading="lazy" />
               <div className="image-overlay">
                 <div className="tech-stack">
                   {techStack.map((tech, index) => (
@@ -160,13 +153,34 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-             Sou Emannuel, tenho 20 anos e sou desenvolvedor web focado em transformar ideias em experiências digitais únicas, rápidas e acessíveis. Crio sites modernos, bots automatizados e landing pages estratégicas para pequenos negócios, criadores de conteúdo e empreendedores que querem se destacar online — sem complicação, enrolação ou promessas vazias.
+                Sou Emannuel, tenho 20 anos e sou desenvolvedor web focado em transformar ideias em experiências digitais únicas, rápidas e acessíveis. Crio sites modernos, bots automatizados e landing pages estratégicas para pequenos negócios, criadores de conteúdo e empreendedores que querem se destacar online — sem complicação, enrolação ou promessas vazias.
+              </motion.p>
 
-Trabalho com foco em agilidade, personalização e eficiência, aliando técnica, criatividade e suporte real. Cada projeto é construído como uma missão: com planejamento, dedicação e entrega pontual.
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                Trabalho com foco em agilidade, personalização e eficiência, aliando técnica, criatividade e suporte real. Cada projeto é construído como uma missão: com planejamento, dedicação e entrega pontual.
+              </motion.p>
 
-Além do desenvolvimento, sou uma pessoa que gosta de aprender sempre, buscando novas tecnologias e tendências para entregar o melhor aos meus clientes. Valorizo a comunicação transparente e o relacionamento direto, porque acredito que isso faz toda a diferença no resultado final.
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                Além do desenvolvimento, sou uma pessoa que gosta de aprender sempre, buscando novas tecnologias e tendências para entregar o melhor aos meus clientes. Valorizo a comunicação transparente e o relacionamento direto, porque acredito que isso faz toda a diferença no resultado final.
+              </motion.p>
 
-Seja um portfólio, uma landing page que converte, um site com painel de controle ou até um bot para Discord — aqui você tem transparência, suporte direto comigo e resultado de verdade.
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                Seja um portfólio, uma landing page que converte, um site com painel de controle ou até um bot para Discord — aqui você tem transparência, suporte direto comigo e resultado de verdade.
               </motion.p>
               
               <motion.div 

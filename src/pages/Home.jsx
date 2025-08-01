@@ -13,10 +13,7 @@ import {
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Home.css';
-<<<<<<< HEAD
-=======
 import profileImage from './ChatGPT Image 1 de ago. de 2025, 17_30_39.png';
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
 
 export default function Home() {
   // Estado para controlar qual item do FAQ está aberto
@@ -68,23 +65,19 @@ export default function Home() {
   const pricingPlans = [
     {
       name: "Site Básico",
-<<<<<<< HEAD
-      price: "800",
-=======
-      price: " R$ 950",
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
+      price: "R$ 950",
       features: ["Até 5 páginas", "Design responsivo", "Formulário de contato", "Otimização básica SEO"],
       popular: false
     },
     {
       name: "Site Profissional",
-      price: "1.500",
+      price: "R$ 1.500",
       features: ["Até 15 páginas", "Painel administrativo", "Blog integrado", "SEO avançado", "Suporte 30 dias"],
       popular: true
     },
     {
       name: "Landing Page",
-      price: "500",
+      price: "R$ 500",
       features: ["1 página otimizada", "Formulário de leads", "Design high-conversion", "Integração com redes sociais"],
       popular: false
     }
@@ -93,11 +86,7 @@ export default function Home() {
   const faqs = [
     {
       question: "Qual o prazo médio de entrega?",
-<<<<<<< HEAD
-      answer: "Sites básicos em até 7 dias úteis, projetos complexos em até 15 dias. Landing pages em 5 dias úteis."
-=======
       answer: "Sites básicos em até 10-15 dias úteis, projetos complexos em até 15 dias. Landing pages em 5 dias úteis."
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
     },
     {
       question: "Vocês oferecem suporte pós-entrega?",
@@ -158,11 +147,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="hero-image"
           >
-<<<<<<< HEAD
-            <img src="/images/hero-dev.png" alt="Desenvolvimento Web" loading="lazy" />
-=======
             <img src={profileImage} alt="Desenvolvimento Web" loading="lazy" />
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
           </motion.div>
         </div>
 
@@ -178,9 +163,10 @@ export default function Home() {
             <div className="bio-content">
               <h2>Sobre a Emannuel Dev</h2>
               <p>
-               Na Emannuel Dev, transformamos ideias em presença digital de verdade. Somos uma loja digital especializada em oferecer sites, bots e landing pages sob medida, com foco em pequenos negócios, autônomos e prestadores de serviço que querem se destacar sem complicação e sem gastar muito.
-
-Com uma abordagem direta, organizada e transparente, entregamos resultados reais, com design funcional, atendimento humano e suporte pós-venda. Aqui, você encontra preços justos, comunicação fácil e entrega rápida — tudo com a sua cara, sem enrolação.
+                Na Emannuel Dev, transformamos ideias em presença digital de verdade. Somos uma loja digital especializada em oferecer sites, bots e landing pages sob medida, com foco em pequenos negócios, autônomos e prestadores de serviço que querem se destacar sem complicação e sem gastar muito.
+              </p>
+              <p>
+                Com uma abordagem direta, organizada e transparente, entregamos resultados reais, com design funcional, atendimento humano e suporte pós-venda. Aqui, você encontra preços justos, comunicação fácil e entrega rápida — tudo com a sua cara, sem enrolação.
               </p>
               <a href="/sobre" className="bio-link">
                 Conheça minha jornada <FaArrowRight />
@@ -191,11 +177,7 @@ Com uma abordagem direta, organizada e transparente, entregamos resultados reais
                 <FaRegClock className="highlight-icon" />
                 <div>
                   <h4>Entrega Rápida</h4>
-<<<<<<< HEAD
-                  <p>Projetos entregues em até 7 dias</p>
-=======
                   <p>Projetos entregues em até 10 dias</p>
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
                 </div>
               </div>
               <div className="highlight-item">
@@ -363,7 +345,7 @@ Com uma abordagem direta, organizada e transparente, entregamos resultados reais
                 {plan.popular && <div className="popular-badge">Mais escolhido</div>}
                 <h3>{plan.name}</h3>
                 <div className="pricing-value">
-                  <span>R$</span> {plan.price}
+                  {plan.price}
                 </div>
                 <ul className="pricing-features">
                   {plan.features.map((feature, i) => (

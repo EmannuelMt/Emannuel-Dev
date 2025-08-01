@@ -8,10 +8,7 @@ import Pricing from './pages/Pricing';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
-<<<<<<< HEAD
-=======
 import Chatbot from './components/Chatbot';
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
 
 function App() {
   return (
@@ -42,12 +39,9 @@ function App() {
         >
           <i className="whatsapp-icon"></i>
         </a>
-<<<<<<< HEAD
-=======
         
         {/* Componente do Chatbot */}
         <Chatbot />
->>>>>>> aefe7df (Corrige carregamento de imagem e atualiza seção About)
       </div>
     </Router>
   );

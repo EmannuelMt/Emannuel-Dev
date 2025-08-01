@@ -48,7 +48,6 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      // Envia para o FormSubmit.co
       const emailResponse = await fetch('https://formsubmit.co/ajax/emannuelmatosdeoliveira@gmail.com', {
         method: 'POST',
         headers: {
@@ -62,14 +61,13 @@ export default function Contact() {
           projectType: formData.projectType,
           message: formData.message,
           _subject: 'Novo contato do site - ' + formData.projectType,
-          _template: 'table' // Formato organizado em tabela
+          _template: 'table'
         })
       });
 
       const result = await emailResponse.json();
       
       if (result.success) {
-        // Prepara mensagem para WhatsApp
         const whatsappMessage = `Olá Emannuel, tenho interesse em um projeto!%0A%0A` +
           `*Nome:* ${formData.name}%0A` +
           `*E-mail:* ${formData.email}%0A` +
@@ -77,7 +75,6 @@ export default function Contact() {
           `*Tipo de Projeto:* ${formData.projectType}%0A` +
           `*Mensagem:* ${formData.message}`;
 
-        // Abre WhatsApp em nova aba
         window.open(`https://wa.me/5562984317595?text=${whatsappMessage}`, '_blank');
 
         setSubmitSuccess(true);
@@ -89,7 +86,6 @@ export default function Contact() {
           message: ''
         });
 
-        // Limpa o sucesso após 5 segundos
         setTimeout(() => setSubmitSuccess(false), 5000);
       } else {
         throw new Error('Falha no envio do formulário');
@@ -104,7 +100,6 @@ export default function Contact() {
 
   return (
     <div className="contact-page">
-      {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
           <motion.div
@@ -120,7 +115,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Content */}
       <section className="contact-content">
         <div className="container">
           <motion.div 
@@ -130,7 +124,6 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            {/* Contact Form */}
             <motion.div 
               className="contact-form"
               whileHover={{ y: -5 }}
@@ -245,7 +238,6 @@ export default function Contact() {
               </form>
             </motion.div>
 
-            {/* Contact Info */}
             <div className="contact-info">
               <h2>
                 <FaWhatsapp className="section-icon" /> Informações de Contato
@@ -262,7 +254,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3>WhatsApp</h3>
-                    <a hhref="https://wa.me/5562984317595?text=Olá%20Emannuel%20Dev!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços."  target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/5562984317595?text=Olá%20Emannuel%20Dev!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." target="_blank" rel="noopener noreferrer">
                       (62) 98431-7595
                     </a>
                     <p>Resposta rápida em horário comercial</p>

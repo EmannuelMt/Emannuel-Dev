@@ -743,14 +743,7 @@ export default function About() {
               >
                 Iniciar Projeto
               </motion.a>
-              <motion.a
-                href="/portfolio"
-                className="cta-button secondary"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Ver Portfólio
-              </motion.a>
+              
               <motion.button
                 onClick={downloadResume}
                 className="cta-button tertiary"

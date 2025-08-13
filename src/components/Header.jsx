@@ -33,10 +33,6 @@ export default function Header() {
       name: "Serviços",
     },
     { 
-      path: "/portfolio", 
-      name: "Portfólio" 
-    },
-    { 
       path: "/precos", 
       name: "Preços",
       highlight: true

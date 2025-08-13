@@ -39,19 +39,19 @@ export default function Footer() {
   const socialLinks = [
     { 
       icon: <FaInstagram className="text-xl" />, 
-      url: "#", 
+      url: "https://www.instagram.com/emannuel_mt/", 
       label: "Instagram",
       className: "instagram"
     },
     { 
       icon: <FaGithub className="text-xl" />, 
-      url: "#", 
+      url: "https://github.com/EmannuelMt", 
       label: "GitHub",
       className: "github"
     },
     { 
       icon: <FaLinkedin className="text-xl" />, 
-      url: "#", 
+      url: "https://www.linkedin.com/in/emannuel-matos-a98556261/", 
       label: "LinkedIn",
       className: "linkedin"
     }

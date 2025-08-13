@@ -14,9 +14,11 @@ import {
 import { motion } from 'framer-motion';
 import './Home.css';
 import profileImage from './ChatGPT Image 1 de ago. de 2025, 17_30_39.png';
+import CantinhoDoUniversoImage from './Captura de tela 2025-08-13 141109.png';
+import goldenGrillImage from './Captura de tela 2025-08-04 235057.png';
+import ecosRealidadeImage from './Captura de tela 2025-08-04 234136.png'; // Substitua pelo arquivo correto
 
 export default function Home() {
-  // Estado para controlar qual item do FAQ está aberto
   const [activeFaqIndex, setActiveFaqIndex] = useState(null);
 
   const toggleFaq = (index) => {
@@ -46,19 +48,19 @@ export default function Home() {
 
   const portfolioItems = [
     {
-      title: "Loja Virtual - Moda Fitness",
-      type: "E-commerce Completo",
-      image: "/portfolio/ecommerce-fitness.jpg"
+      title: "Golden Grill",
+      type: "Sistema de gerenciamento para restaurantes com cardápio digital, pedidos online e dashboard administrativo.",
+      image: goldenGrillImage
     },
     {
-      title: "Bot de Música - Servidor Gamer",
-      type: "Automação Discord",
-      image: "/portfolio/discord-bot.jpg"
+      title: "Cantinho Do Universo",
+      type: "Site Pessoal.",
+      image: CantinhoDoUniversoImage
     },
     {
-      title: "Landing Page - Consultoria",
-      type: "Página de Conversão",
-      image: "/portfolio/landing-consultoria.jpg"
+      title: "Ecos Da Realidade",
+      type: "Site para mestres e jogadores de RPG",
+      image: ecosRealidadeImage
     }
   ];
 

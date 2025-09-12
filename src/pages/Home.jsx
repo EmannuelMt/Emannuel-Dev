@@ -1,19 +1,21 @@
 import { useState } from 'react';
-import { 
-  FaLaptopCode, 
-  FaRobot, 
-  FaMobileAlt, 
-  FaArrowRight, 
-  FaWhatsapp, 
-  FaRegClock, 
-  FaRegMoneyBillAlt, 
+import {
+  FaLaptopCode,
+  FaRobot,
+  FaMobileAlt,
+  FaArrowRight,
+  FaWhatsapp,
+  FaRegClock,
+  FaRegMoneyBillAlt,
   FaRegUserCircle,
   FaChevronDown,
-  FaChevronUp
+  FaChevronUp,
+  FaCode,
+  FaEye
 } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import './Home.css';
-import profileImage from './ChatGPT Image 1 de ago. de 2025, 17_30_39.png';
+import profileImage from './AIDrawing_250911_d80e2d99-024a-4ae2-bd8e-9c4422800165_0_MiriCanvas.png';
 import CantinhoDoUniversoImage from './Captura de tela 2025-08-13 141109.png';
 import goldenGrillImage from './Captura de tela 2025-08-04 235057.png';
 import ecosRealidadeImage from './Captura de tela 2025-08-04 234136.png'; // Substitua pelo arquivo correto
@@ -101,7 +103,9 @@ export default function Home() {
     {
       question: "Qual a forma de pagamento?",
       answer: "Aceitamos parcelamento em até 12x no cartão, transferência bancária ou PIX (com desconto à vista)."
-    }
+    },
+
+
   ];
 
   return (
@@ -118,7 +122,7 @@ export default function Home() {
             >
               Soluções Digitais <span>que Impulsionam</span> seu Negócio
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -127,7 +131,7 @@ export default function Home() {
             >
               Desenvolvimento web personalizado com foco em resultados e experiência do usuário
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -137,12 +141,12 @@ export default function Home() {
               <a href="/contato" className="cta-button primary">
                 Solicite um orçamento
               </a>
-              <a href="#servicos" className="cta-button secondary">
+              <a href="/servicos" className="cta-button secondary">
                 Conheça nossos serviços <FaChevronDown />
               </a>
             </motion.div>
           </div>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -165,41 +169,69 @@ export default function Home() {
             <div className="bio-content">
               <h2>Sobre a Emannuel Dev</h2>
               <p>
-                Na Emannuel Dev, transformamos ideias em presença digital de verdade. Somos uma loja digital especializada em oferecer sites, bots e landing pages sob medida, com foco em pequenos negócios, autônomos e prestadores de serviço que querem se destacar sem complicação e sem gastar muito.
+                Na <strong>Emannuel Dev</strong>, transformamos ideias em presença digital de verdade. Criamos <strong>sites, bots e landing pages</strong> personalizadas, perfeitas para pequenos negócios, autônomos e prestadores de serviço que querem se destacar online sem complicação e sem gastar além da conta.
               </p>
               <p>
-                Com uma abordagem direta, organizada e transparente, entregamos resultados reais, com design funcional, atendimento humano e suporte pós-venda. Aqui, você encontra preços justos, comunicação fácil e entrega rápida — tudo com a sua cara, sem enrolação.
+                Com uma abordagem prática, organizada e transparente, entregamos projetos com <strong>design funcional, comunicação clara e suporte de verdade</strong>. Aqui você encontra preços justos, atendimento humano e entrega rápida — sempre com a sua identidade em cada detalhe.
               </p>
               <a href="/sobre" className="bio-link">
                 Conheça minha jornada <FaArrowRight />
               </a>
             </div>
+
             <div className="bio-highlights">
               <div className="highlight-item">
                 <FaRegClock className="highlight-icon" />
                 <div>
                   <h4>Entrega Rápida</h4>
-                  <p>Projetos entregues em até 10 dias</p>
+                  <p>Projetos entregues em até 10 dias úteis, com agilidade e qualidade.</p>
                 </div>
               </div>
+
               <div className="highlight-item">
                 <FaRegMoneyBillAlt className="highlight-icon" />
                 <div>
                   <h4>Preço Justo</h4>
-                  <p>Soluções acessíveis sem perder qualidade</p>
+                  <p>Soluções acessíveis, sem perder valor ou qualidade.</p>
                 </div>
               </div>
+
               <div className="highlight-item">
                 <FaRegUserCircle className="highlight-icon" />
                 <div>
                   <h4>Suporte Dedicado</h4>
-                  <p>Acompanhamento personalizado</p>
+                  <p>Acompanhamento próximo e personalizado do início ao pós-entrega.</p>
+                </div>
+              </div>
+
+              <div className="highlight-item">
+                <FaMobileAlt className="highlight-icon" />
+                <div>
+                  <h4>Design Responsivo</h4>
+                  <p>Sites adaptados para qualquer dispositivo: celular, tablet e desktop.</p>
+                </div>
+              </div>
+
+              <div className="highlight-item">
+                <FaCode className="highlight-icon" />
+                <div>
+                  <h4>Código Limpo</h4>
+                  <p>Projetos escaláveis e fáceis de manter, prontos para evoluir.</p>
+                </div>
+              </div>
+
+              <div className="highlight-item">
+                <FaEye className="highlight-icon" />
+                <div>
+                  <h4>Transparência Total</h4>
+                  <p>Comunicação clara e sem letras miúdas: você sabe exatamente o que está contratando.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Serviços */}
       <section id="servicos" className="services-section">
@@ -208,7 +240,7 @@ export default function Home() {
             <h2>Nossos Serviços</h2>
             <p>Soluções digitais personalizadas para suas necessidades</p>
           </div>
-          
+
           <div className="services-grid">
             {services.map((service, index) => (
               <motion.div
@@ -244,9 +276,9 @@ export default function Home() {
             <h2>Por que escolher meus serviços?</h2>
             <p>Diferenciais que fazem a diferença no seu projeto digital</p>
           </div>
-          
+
           <div className="features-grid">
-            <motion.div 
+            <motion.div
               className="feature-card"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -257,8 +289,8 @@ export default function Home() {
               <h3>Design Centrado no Usuário</h3>
               <p>Interfaces intuitivas que proporcionam a melhor experiência para seus clientes</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="feature-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -269,8 +301,8 @@ export default function Home() {
               <h3>Performance Otimizada</h3>
               <p>Sites rápidos que melhoram seu posicionamento no Google</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="feature-card"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -292,7 +324,7 @@ export default function Home() {
             <h2>Trabalhos Recentes</h2>
             <p>Confira alguns projetos que desenvolvi para clientes</p>
           </div>
-          
+
           <div className="portfolio-grid">
             {portfolioItems.map((item, index) => (
               <motion.div
@@ -317,7 +349,7 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          
+
           <div className="portfolio-cta">
             <a href="/portfolio" className="cta-button secondary">
               Explorar portfólio completo
@@ -333,7 +365,7 @@ export default function Home() {
             <h2>Planos e Investimento</h2>
             <p>Soluções para diferentes necessidades e orçamentos</p>
           </div>
-          
+
           <div className="pricing-grid">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -360,7 +392,7 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          
+
           <div className="pricing-disclaimer">
             <p>Valores podem variar conforme complexidade do projeto. Entre em contato para um orçamento personalizado.</p>
           </div>
@@ -374,15 +406,15 @@ export default function Home() {
             <h2>Perguntas Frequentes</h2>
             <p>Tire suas dúvidas sobre desenvolvimento web</p>
           </div>
-          
+
           <div className="faq-grid">
             {faqs.map((faq, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`faq-item ${activeFaqIndex === index ? 'active' : ''}`}
               >
-                <div 
-                  className="faq-question" 
+                <div
+                  className="faq-question"
                   onClick={() => toggleFaq(index)}
                 >
                   <h3>{faq.question}</h3>
@@ -412,8 +444,8 @@ export default function Home() {
               <p>Vamos conversar sobre seu projeto e como posso ajudar seu negócio a crescer online</p>
             </div>
             <div className="final-cta-buttons">
-              <a 
-                href="https://wa.me/5562984317595?text=Olá%20Emannuel%20Dev!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." 
+              <a
+                href="https://wa.me/5562984317595?text=Olá%20Emannuel%20Dev!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços."
                 className="cta-button whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"

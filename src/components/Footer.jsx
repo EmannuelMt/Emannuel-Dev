@@ -22,7 +22,9 @@ export default function Footer() {
     { path: "/servicos", label: "Serviços" },
     { path: "/portfolio", label: "Portfólio" },
     { path: "/sobre", label: "Sobre Mim" },
-    { path: "/contato", label: "Contato" }
+    { path: "/contato", label: "Contato" },
+    { path: "/login", label: "Login" },
+    { path: "/registro", label: "Registro" }
   ];
 
   // Services list data
@@ -67,8 +69,8 @@ export default function Footer() {
     },
     {
       icon: <FaEnvelope className="footer-contact-icon" />,
-      url: "mailto:emannuelmatosdeoliveira@gmail.com",
-      text: "emannuelmatosdeoliveira@gmail.com",
+      url: "mailto:emannueldevfullstacksolutions@gmail.com",
+      text: "emannueldevfullstacksolutions@gmail.com",
       label: "Email"
     }
   ];
@@ -90,7 +92,7 @@ export default function Footer() {
             <div className="footer-brand">
               <BiCodeAlt className="footer-brand-icon" aria-hidden="true" />
               <h3 className="footer-brand-text">
-                Emannuel Dev
+                Emannuel Dev 
               </h3>
             </div>
             <p className="footer-description">
@@ -181,7 +183,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-copyright">
             <FaRegCopyright className="text-sm" aria-hidden="true" />
-            <span>{currentYear} Emannuel Dev. Todos os direitos reservados.</span>
+            <span>{currentYear} Emannuel Dev Fullstack Solutions. Todos os direitos reservados.</span>
           </div>
           
           <div className="footer-legal-links">
@@ -198,9 +200,8 @@ export default function Footer() {
           </div>
           
           <div className="footer-made-with">
-            <span>Feito com</span>
-            <FaHeart className="footer-heart" aria-label="amor" />
-            <span>por Emannuel</span>
+            <span>Feito</span>
+            <span>Por emannueldevfullstacksolutions</span>
           </div>
         </div>
       </div>

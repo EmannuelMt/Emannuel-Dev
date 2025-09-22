@@ -1,0 +1,367 @@
+:root {
+  --primary: #4361ee;
+  --primary-dark: #3a0ca3;
+  --primary-light: #4cc9f0;
+  --secondary: #f72585;
+  --text: #2b2d42;
+  --text-light: #6c757d;
+  --light: #f8f9fa;
+  --dark: #1a1a2e;
+  --success: #2ec4b6;
+  --warning: #ff9f1c;
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.privacy-policy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--text);
+  line-height: 1.7;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.privacy-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.header-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.privacy-title {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.last-updated {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.header-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.decoration-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.decoration-circle:nth-child(1) {
+  width: 120px;
+  height: 120px;
+  top: -30px;
+  right: -30px;
+}
+
+.decoration-circle:nth-child(2) {
+  width: 80px;
+  height: 80px;
+  bottom: -20px;
+  left: 10%;
+}
+
+.decoration-circle:nth-child(3) {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: -20px;
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.section:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.section-header {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--light);
+  transition: var(--transition);
+}
+
+.section-header:hover {
+  background: rgba(67, 97, 238, 0.05);
+}
+
+.section-title-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  color: var(--primary-dark);
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.section-toggle {
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.section-content {
+  overflow: hidden;
+}
+
+.section-content-inner {
+  padding: 1.5rem;
+}
+
+.contact-info {
+  background: rgba(67, 97, 238, 0.05);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-sm);
+  border-left: 4px solid var(--primary);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.note {
+  background: rgba(255, 158, 28, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border-left: 4px solid var(--warning);
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.highlight {
+  background: rgba(247, 37, 133, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.definition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.definition-item {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+.definition-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow);
+}
+
+.definition-item h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem 0;
+  color: var(--primary-dark);
+}
+
+.rights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.right-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(46, 196, 182, 0.1);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+.right-item:hover {
+  background: rgba(46, 196, 182, 0.15);
+  transform: translateX(5px);
+}
+
+.right-item svg {
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+li::marker {
+  color: var(--primary);
+}
+
+strong {
+  color: var(--primary-dark);
+}
+
+.policy-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--light);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    padding: 1rem;
+  }
+  
+  .privacy-header {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .privacy-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-header {
+    padding: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  .section-content-inner {
+    padding: 1.25rem;
+  }
+  
+  .definition-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-title-container {
+    gap: 0.75rem;
+  }
+  
+  .section-icon {
+    font-size: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+  }
+  
+  .definition-item {
+    padding: 1.25rem;
+  }
+}

@@ -37,7 +37,7 @@ import {
 } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './AIDrawing_250911_d80e2d99-024a-4ae2-bd8e-9c4422800165_0_MiriCanvas.png'; 
-import './auth.css'
+import './Register.css'
 
 export default function Register() {
   const [formData, setFormData] = useState({

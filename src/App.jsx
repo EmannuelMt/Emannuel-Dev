@@ -13,7 +13,9 @@ import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
 import Profile from './pages/Profile';
 import Dashboard from './pages/Dashboard';
-import ProtectedRoute from './components/ProtectedRoute'; // Novo componente
+import ProtectedRoute from './components/ProtectedRoute';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+
 
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/registro" element={<Register />} />
             <Route path="/esqueci-senha" element={<ForgotPassword />} />
+            <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
             
             {/* Rotas protegidas - só acessíveis quando logado */}
             <Route 

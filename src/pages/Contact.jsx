@@ -176,7 +176,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const emailResponse = await fetch('https://formsubmit.co/ajax/emannuelmatosdeoliveira@gmail.com', {
+      const emailResponse = await fetch('https://formsubmit.co/ajax/emannueldevfullstacksolutions@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -689,8 +689,8 @@ export default function Contact() {
                       </div>
                       <div>
                         <h3>E-mail Corporativo</h3>
-                        <a href="mailto:emannuelmatosdeoliveira@gmail.com">
-                          emannuelmatosdeoliveira@gmail.com
+                        <a href="mailto:emannueldevfullstacksolutions@gmail.com">
+                         emannueldevfullstacksolutions@gmail.com
                         </a>
                         <p>Resposta em até 4 horas úteis</p>
                       </div>

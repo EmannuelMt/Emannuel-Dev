@@ -266,9 +266,6 @@ const footerData = {
     }
   ],
   legal: [
-    { url: "/termos", text: "Termos de Serviço", icon: <FiCode /> },
-    { url: "/privacidade", text: "Política de Privacidade", icon: <FaShieldAlt /> },
-    { url: "/cookies", text: "Política de Cookies", icon: <FiDatabase /> }
   ]
 };
 

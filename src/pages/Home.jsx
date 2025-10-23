@@ -794,7 +794,7 @@ export default function Home() {
                 >
                   <FaWhatsapp /> Falar no WhatsApp
                 </a>
-                <a href="mailto:contato@emanueldev.com" className="cta-button secondary">
+                <a href="mailto:emannueldevfullstacksolutions@gmail.com" className="cta-button secondary">
                   <FaEnvelope /> Enviar e-mail
                 </a>
               </div>

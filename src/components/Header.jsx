@@ -152,6 +152,14 @@ export default function Header() {
   ];
 
   const profileMenuItems = [
+<<<<<<< HEAD
+=======
+    { path: "/perfil", name: "Meu Perfil", icon: <FiUser size={16} /> },
+    { path: "/dashboard", name: "Dashboard", icon: <FaTachometerAlt size={16} /> },
+    { path: "/configuracoes", name: "Configurações", icon: <FiSettings size={16} /> },
+    { path: "/assinatura", name: "Assinatura", icon: <FiCreditCard size={16} /> },
+    { path: "/ajuda", name: "Ajuda", icon: <FiHelpCircle size={16} /> }
+>>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
   ];
 
   const handleLogout = async () => {

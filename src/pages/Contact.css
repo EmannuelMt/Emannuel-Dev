@@ -1368,7 +1368,3 @@
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}

@@ -3,10 +3,6 @@ import { SiJavascript, SiReact, SiNodedotjs, SiTypescript, SiHtml5, SiCss3, SiMo
 import { motion } from 'framer-motion';
 import './About.css';
 import profileImage from './IMG-20250323-WA0010.jpg';
-<<<<<<< HEAD
-=======
-import resumePDF from './Emannuel-Dev-CV.pdf';
->>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
 
 const projectsData = [
   {
@@ -288,18 +284,6 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="hero-buttons"
             >
-<<<<<<< HEAD
-           
-=======
-              <motion.button
-                onClick={downloadResume}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="resume-button"
-              >
-                <FaFilePdf /> Baixar Currículo
-              </motion.button>
->>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
             </motion.div>
           </motion.div>
         </div>

@@ -45,13 +45,7 @@ import { motion, useInView } from 'framer-motion';
 import './Home.css';
 
 import profileImage from './AIDrawing_250911_d80e2d99-024a-4ae2-bd8e-9c4422800165_0_MiriCanvas.png';
-import CantinhoDoUniversoImage from './Captura de tela 2025-08-13 141109.png';
-<<<<<<< HEAD
 import buguerDeliciaImage from './Opera Instantâneo_2025-10-22_230837_buguerdelicia.netlify.app.png';
-=======
-import goldenGrillImage from './Captura de tela 2025-08-04 235057.png';
->>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
-import ecosRealidadeImage from './Captura de tela 2025-08-04 234136.png';
 
 // Componentes modulares
 const ServiceCard = ({ service, index }) => (
@@ -233,27 +227,11 @@ export default function Home() {
 
   const portfolioItems = [
     {
-<<<<<<< HEAD
+
       title: "Buguer Delicia",
       type: "O Burger Delícia - Cardápio Online é uma plataforma digital moderna que transforma a maneira como seus clientes fazem pedidos.",
       image: buguerDeliciaImage
     },
-=======
-      title: "Golden Grill",
-      type: "Sistema de gerenciamento para restaurantes com cardápio digital, pedidos online e dashboard administrativo.",
-      image: goldenGrillImage
-    },
-    {
-      title: "Cantinho Do Universo",
-      type: "Site Pessoal.",
-      image: CantinhoDoUniversoImage
-    },
-    {
-      title: "Ecos Da Realidade",
-      type: "Site para mestres e jogadores de RPG",
-      image: ecosRealidadeImage
-    }
->>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
   ];
 
   const pricingPlans = [
@@ -393,28 +371,24 @@ export default function Home() {
   const testimonials = [
     {
       name: "Carlos Silva",
-<<<<<<< HEAD
-=======
+
       role: "Diretor - Golden Grill",
->>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
+
       content: "O sistema desenvolvido pela Emannuel Dev revolucionou nosso restaurante. Agora conseguimos gerenciar pedidos online com eficiência e nossos clientes amam a experiência!",
       rating: 5
     },
     {
       name: "Marina Oliveira",
-<<<<<<< HEAD
-=======
+
       role: "Proprietária - Cantinho do Universo",
->>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
+
       content: "Fiquei impressionada com a qualidade do meu site pessoal. Profissionalismo, atenção aos detalhes e entrega dentro do prazo. Super recomendo!",
       rating: 5
     },
     {
       name: "Ricardo Mendes",
-<<<<<<< HEAD
-=======
+
       role: "Game Master - Ecos da Realidade",
->>>>>>> 4297f838abcc7b5ee0ed380050876e7c3b21e74e
       content: "A plataforma que criaram para nossa comunidade de RPG é incrível. Os jogadores adoraram as funcionalidades e a interface intuitiva.",
       rating: 5
     }
